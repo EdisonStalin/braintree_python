@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div class="wrapper">
+  <div class="checkout container">
+
+    <header>
+      <h1>Registrar Cliente</h1>
+    </header>
+
+    <form id="customer" method="post">
+ 
+    <div class="mb-3">    
+      <label for="first_name">Nombres </label>
+      <input type="text" name="first_name"  class="form-control"  aria-describedby="inputfirstname" placeholder="Ingrese sus Nombres">
+    </div> 
+
+    <div class="mb-3">  
+      <label for="lastname">Apellidos</label>
+      <input type="text" name="last_name"  class="form-control"  id="inputlastname" aria-describedby="emailHelp" placeholder="Ingrese sus Apellidos">
+    </div>
+
+    <div class="mb-3">  
+      <label for="company">Compania </label>
+      <input type="text" name="company"  class="form-control"  aria-describedby="inputcompany" placeholder="Ingrese su Compania">
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+
+    <div class="mb-3">  
+      <label for="phone">Télefono</label>
+      <input type="text" name="phone"  class="form-control"  id="inputphone" aria-describedby="emailHelp" placeholder="Ingrese su teléfono">
+    <div>  
+        <br>
+        <input type="hidden" id="nonce" name="payment_method_nonce" />
+        <button class="button" type="submit" class="btn btn-success"><span>Registrar</span></button>
+
+    </form>
+
+    
+  </div>
+</div>
+
+
+{% endblock %}
