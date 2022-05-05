@@ -10,14 +10,15 @@
         Make a payment with Braintree using PayPal or a card
       </p>
     </header>
-
     <form id="payment-form" method="post" action="/checkouts">
-      <section>
         <label for="amount">
-          <span class="input-label">Amount</span>
+          {% for plan in plans %}
+          <span class="input-label">name {{ plan.name }} </span>
+          <span class="input-label">Amount </span>
           <div class="input-wrapper amount-wrapper">
-            <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="10">
+            <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="{{ plan.price }}" readonly>
           </div>
+          {% endfor %}
         </label>
 
         <div class="bt-drop-in-wrapper">

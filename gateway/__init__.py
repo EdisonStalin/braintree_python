@@ -25,3 +25,6 @@ def get_plans():
 
 def create_customer(costumer):
     return gateway.customer.create(costumer)
+
+def create_subscriptions(options):
+    return gateway.subscription.create(options)
